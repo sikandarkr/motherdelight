@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.heroSwiper .swiper-pagination-bullet {
+  background: #8b5a3c;
+  opacity: 0.4;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+  background: #5a2c14;
+  opacity: 1;
+}

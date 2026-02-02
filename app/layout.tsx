@@ -48,6 +48,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Authentic homemade foods by Champaran Swad using traditional family recipes from Bihar",
       },
+      {
+        url: "https://www.champaranswad.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Champaran Swad – Homemade Pickles, Papad and Traditional Bihari Foods from Motihari",
+      },
     ],
   },
 
@@ -58,6 +64,7 @@ export const metadata: Metadata = {
       "Traditional homemade pickles, papad and foods from Motihari, Bihar.",
     images: [
       "https://www.champaranswad.com/images/champaran-swad-traditional-homemade-foods.png",
+      "https://www.champaranswad.com/og-image.png",
     ],
   },
 };

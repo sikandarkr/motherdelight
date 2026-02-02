@@ -24,7 +24,7 @@ export default function HeroSlider() {
                     title="Taste the Tradition of Homemade Foods"
                     subtitle="Pickles • Papad • Masala • Grains"
                     tagline="Freshly Made. Delivered with Love"
-                    image="/images/motherdelight-kitchen-traditional-homemade-foods.png"
+                    image="/images/champaranswad-homemade-pickles-papad-grains-indian-foods.png"
                 />
             </SwiperSlide>
 
@@ -34,7 +34,7 @@ export default function HeroSlider() {
                     title="Pure Homemade Goodness"
                     subtitle="No Preservatives • Family Recipes"
                     tagline="Authentic flavors in every bite"
-                    image="/images/motherdelight-kitchen-pure-family-recipes.png"
+                    image="/images/ChamparanSwad-kitchen-pure-family-recipes.png"
                 />
             </SwiperSlide>
 
@@ -44,7 +44,7 @@ export default function HeroSlider() {
                     title="Fresh Foods Made Daily"
                     subtitle="Traditional Taste • Modern Hygiene"
                     tagline="Order easily on WhatsApp"
-                    image="/images/motherdelight-kitchen-fresh-daily-homemade.png"
+                    image="/images/champaranswad-kitchen-fresh-daily-homemade.png"
                 />
             </SwiperSlide>
 
@@ -96,7 +96,7 @@ function HeroSlide({
                 <div>
                     <Image
                         src={image}
-                        alt={`${title} – homemade pickles, papad and grains by MotherDelight Kitchen`}
+                        alt={`${title} – homemade pickles, papad and grains by ChamparanSwad Kitchen`}
                         width={650}
                         height={420}
                         className="rounded-xl"

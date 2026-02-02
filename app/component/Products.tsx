@@ -15,7 +15,7 @@ export default function Products() {
           name="Pickles"
           desc="Traditional homemade pickles prepared in small batches using fresh vegetables, cold-pressed oils, and hand-ground spices."
           price="Amla • Mango • Lemon • Mixed"
-          image="/images/motherdelight-kitchen-traditional-homemade-pickles.png"
+          image="/images/champaranswad-kitchen-traditional-homemade-pickles.png"
         />
 
         {/* COMING SOON */}
@@ -23,7 +23,7 @@ export default function Products() {
           name="Grains / Dalia"
           desc="Stone-ground grains and dalia made from premium quality wheat — hygienically packed for everyday cooking."
           price="Wheat Dalia • Suji • Other grains"
-          image="/images/motherdelight-kitchen-wheat-grains-dalia.png"
+          image="/images/champaranswad-kitchen-wheat-grains-dalia.png"
         />
 
         {/* FUTURE */}
@@ -31,7 +31,7 @@ export default function Products() {
           name="Papad"
           desc="Handmade papad dried naturally under sunlight for authentic taste and perfect crispness."
           price="Classic • Spiced • Garlic"
-          image="/images/motherdelight-kitchen-handmade-papad.png"
+          image="/images/champaranswad-kitchen-handmade-papad.png"
         />
 
 
@@ -51,7 +51,7 @@ function ProductCard({
 
       <Image
         src={image}
-        alt={`${name} by MotherDelight Kitchen`}
+        alt={`${name} by ChamparanSwad Kitchen`}
         width={200}
         height={200}
 

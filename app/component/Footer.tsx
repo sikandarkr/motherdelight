@@ -9,14 +9,14 @@ export default function Footer() {
                 {/* BRAND */}
                 <div>
                     <Image
-                        src="/images/motherdelight-homemade-pickles-papad-grains-indian-foods.png"
-                        alt="MotherDelight Kitchen logo – homemade Indian pickles, papad and grains prepared fresh using traditional family recipes"
+                        src="/images/champaranswad-homemade-pickles-papad-grains-indian-foods.png"
+                        alt="ChamparanSwad-homemade-pickles-papad-grains-indian-foods.png Kitchen logo – homemade Indian pickles, papad and grains prepared fresh using traditional family recipes"
                         width={120}
                         height={120}
                         className="rounded-2xl bg-transparent mix-blend-multiply drop-shadow-sm"
                     />
                     <p className="mt-4 text-gray-700 text-sm leading-relaxed">
-                        MotherDelight brings authentic homemade foods from our kitchen to your table —
+                      champaranswad brings authentic homemade foods from our kitchen to your table —
                         prepared with love, traditional recipes, and pure ingredients.
                     </p>
                     <p className="mt-2 text-gray-600 text-sm">
@@ -81,7 +81,7 @@ export default function Footer() {
             {/* BOTTOM BAR */}
             <div className="border-t border-[#d6bfa8] mt-12 pt-6 text-center text-sm text-gray-600">
 
-                © {new Date().getFullYear()} MotherDelight Homemade Foods • Crafted with ❤️
+                © {new Date().getFullYear()} ChamparanSwad Homemade Foods • Crafted with ❤️
 
             </div>
 

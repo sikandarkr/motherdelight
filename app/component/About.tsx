@@ -9,7 +9,7 @@ export default function About() {
         {/* LEFT IMAGE */}
         <div>
           <Image
-            src="/images/homemade-pickles-papad-grains-motherdelight.png"
+            src="/images/homemade-pickles-papad-grains-champaranswad.png"
             alt="Homemade preparation"
             width={500}
             height={400}
@@ -21,11 +21,11 @@ export default function About() {
         <div>
 
           <h2 className="text-3xl font-serif font-bold text-[#5A2C14]">
-            About MotherDelight
+            About ChamparanSwad
           </h2>
 
           <p className="mt-4 text-gray-700 leading-relaxed">
-            Rooted in tradition and made with love, MotherDelight brings
+            Rooted in tradition and made with love, ChamparanSwad brings
             authentic homemade flavors straight from our kitchen to your table.
             Every product is prepared in small batches using family recipes,
             pure ingredients, and traditional methods.

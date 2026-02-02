@@ -11,97 +11,84 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
 
+export const metadata: Metadata = {
+  title: "Champaran Swad | Homemade Pickles, Papad & Traditional Foods from Bihar",
 
-export const metadata = {
-  title: "MotherDelight Kitchen | Homemade Pickles, Papad & Grains",
+  description:
+    "Champaran Swad offers authentic homemade Bihari pickles, papad and traditional foods from Motihari, Bihar — freshly prepared in small batches using family recipes. Order on WhatsApp.",
 
   icons: {
-    icon: "/favicon/motherdelight-kitchen-favicon.png",
+    icon: "/favicon/champaran-swad-traditional-homemade-foods-logo.png",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "MotherDelight Kitchen – Traditional Homemade Indian Foods",
-    description:
-      "Homemade Pickles • Papad • Grains — Freshly Made. Delivered with Love.",
-    images: [
-      "https://motherdelight.com/images/motherdelight-kitchen-traditional-homemade-foods.png",
-    ],
-  },
-  
-  description:
-    "MotherDelight Kitchen offers traditional homemade Indian pickles, papad and grains — freshly prepared in small batches using family recipes. Order on WhatsApp.",
 
   openGraph: {
-    title: "MotherDelight Kitchen – Traditional Homemade Indian Foods",
-
+    title: "Champaran Swad – Authentic Homemade Bihari Foods",
     description:
-      "Homemade Pickles • Papad • Grains — Freshly Made. Delivered with Love.",
-
-    url: "https://motherdelight.com",
-
-    siteName: "MotherDelight Kitchen",
-
+      "Homemade Pickles • Papad • Traditional Foods — Freshly Made in Motihari, Bihar. Delivered with Love.",
+    url: "https://www.champaranswad.com",
+    siteName: "Champaran Swad",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "https://motherdelight.com/images/motherdelight-kitchen-traditional-homemade-foods.png",
+        url: "https://www.champaranswad.com/images/champaran-swad-traditional-homemade-foods.png",
         width: 1200,
         height: 630,
-        alt: "Traditional homemade Indian pickles, papad and grains by MotherDelight Kitchen prepared using family recipes",
+        alt: "Champaran Swad homemade pickles, papad and traditional Bihari foods prepared in Motihari",
       },
-
       {
-        url: "https://motherdelight.com/images/motherdelight-kitchen-pure-family-recipes.png",
+        url: "https://www.champaranswad.com/images/champaran-swad-family-recipes.png",
         width: 1200,
         height: 630,
-        alt: "Pure homemade pickles and papad made with fresh ingredients and traditional family recipes at MotherDelight Kitchen",
-      },
-
-      {
-        url: "https://motherdelight.com/images/motherdelight-kitchen-fresh-daily-homemade.png",
-        width: 1200,
-        height: 630,
-        alt: "Freshly prepared homemade Indian foods including pickles, papad and grains by MotherDelight Kitchen",
+        alt: "Authentic homemade foods by Champaran Swad using traditional family recipes from Bihar",
       },
     ],
+  },
 
-    locale: "en_IN",
-
-    type: "website",
+  twitter: {
+    card: "summary_large_image",
+    title: "Champaran Swad – Homemade Bihari Foods",
+    description:
+      "Traditional homemade pickles, papad and foods from Motihari, Bihar.",
+    images: [
+      "https://www.champaranswad.com/images/champaran-swad-traditional-homemade-foods.png",
+    ],
   },
 };
 
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+
+        {/* Local Business Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FoodEstablishment",
-              name: "MotherDelight Kitchen",
+              name: "Champaran Swad",
+              url: "https://www.champaranswad.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Motihari",
                 addressRegion: "Bihar",
                 addressCountry: "IN",
               },
-              servesCuisine: "Indian",
-              url: "https://motherdelight.com",
+              servesCuisine: "Bihari, Indian",
+              sameAs: [],
             }),
           }}
         />

@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Image
-          src="/images/motherdelight-kitchen-homemade-pickles-papad-grains-logo.png"
+          src="/favicon/champaran-swad-traditional-homemade-foods-logo.png"
           alt="MotherDelight Kitchen logo – homemade Indian pickles, papad and grains prepared with traditional family recipes"
           width={60}
           height={60}

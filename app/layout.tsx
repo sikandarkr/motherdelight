@@ -18,6 +18,14 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  verification: {
+    google: "1e-rdNTf1sfD0foJed17bZ05r1jWnoKvXFq8N3jLW-I",
+  },
+  
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: "Champaran Swad | Homemade Pickles, Papad & Traditional Foods from Bihar",
 
   description:

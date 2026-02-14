@@ -182,10 +182,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-IN">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fffaf4]`}
-      >
-        {/* ✅ Google Analytics */}
+      <head>
+        {/* ✅ Google Analytics (must load in head for proper detection) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZQ0QFNG1BM"
           strategy="afterInteractive"
@@ -195,20 +193,21 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-ZQ0QFNG1BM');
+            gtag('config', 'G-ZQ0QFNG1BM', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
+      </head>
 
-       
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fffaf4]`}
+      >
         <Navbar />
-
-      
         {children}
-
-       
         <Footer />
 
-        {/* ✅ LOCAL BUSINESS + ORGANIZATION SCHEMA */}
+        {/* ✅ LOCAL BUSINESS SCHEMA */}
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -224,7 +223,7 @@ export default function RootLayout({
             image:
               "https://www.champaranswad.com/images/champaran-swad-traditional-homemade-foods.png",
             description:
-              "Authentic homemade Bihari pickles, papad, masala and traditional foods prepared in Motihari, Bihar. Delivering across India.",
+              "Authentic homemade Bihari pickles, papad, masala and traditional foods prepared in Motihari, Bihar.",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Motihari",
@@ -232,22 +231,12 @@ export default function RootLayout({
               postalCode: "845401",
               addressCountry: "IN",
             },
-            areaServed: {
-              "@type": "Country",
-              name: "India",
-            },
             telephone: "+91-7814338779",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+91-7814338779",
-              contactType: "customer service",
-              availableLanguage: ["English", "Hindi"],
-            },
             servesCuisine: ["Bihari", "Indian"],
           })}
         </Script>
 
-        {/* ✅ WEBSITE SCHEMA (for Google sitelinks) */}
+        {/* ✅ WEBSITE SCHEMA */}
         <Script
           id="website-schema"
           type="application/ld+json"

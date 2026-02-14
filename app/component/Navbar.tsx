@@ -116,7 +116,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={navItemClass("/contact")}
             >
-              Contactt
+              Contact
             </Link>
 
             <Link

@@ -9,36 +9,6 @@ import parse, {
     Element,
     DOMNode,
 } from "html-react-parser";
-
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Promise<{ slug: string }>;
-// }) {
-//   const { slug } = await params;
-//   const blog = getBlogBySlug(slug, "en");
-
-//   if (!blog) return {};
-
-//   return {
-//     title: blog.en.title,
-//     description: blog.en.description,
-//     openGraph: {
-//       title: blog.en.title,
-//       description: blog.en.description,
-//       url: `https://www.champaranswad.com/blog/${slug}`,
-//       images: [
-//         {
-//           url: blog.featuredImage,
-//           width: 1200,
-//           height: 630,
-//           alt: blog.en.title,
-//         },
-//       ],
-//       type: "article",
-//     },
-//   };
-// }
 export async function generateMetadata({
     params,
 }: {
@@ -414,33 +384,66 @@ export default async function BlogPage({
 
             <section className="max-w-6xl mx-auto px-6 py-16 flex gap-10">
 
+
                 {/* STICKY SHARE (Desktop) */}
                 <div className="hidden lg:flex flex-col gap-5 sticky top-40 h-fit">
 
+                    {/* WhatsApp */}
                     <a
                         href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:scale-110 transition"
                     >
-                        WA
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                        >
+                            <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.82.74 5.572 2.146 8.01L0 32l7.77-2.034a15.93 15.93 0 008.23 2.23c8.836 0 16-7.164 16-16S24.836.396 16 .396zm0 29.186c-2.49 0-4.93-.65-7.07-1.882l-.507-.3-4.61 1.206 1.23-4.5-.33-.52A13.95 13.95 0 012.05 16.396c0-7.69 6.26-13.95 13.95-13.95 7.69 0 13.95 6.26 13.95 13.95 0 7.69-6.26 13.95-13.95 13.95zm7.59-10.44c-.415-.208-2.45-1.21-2.83-1.35-.38-.14-.66-.208-.94.208-.277.415-1.075 1.35-1.32 1.63-.245.277-.49.31-.905.104-.415-.208-1.75-.645-3.333-2.055-1.23-1.095-2.06-2.45-2.3-2.865-.245-.415-.026-.64.182-.847.186-.186.415-.49.623-.735.208-.245.277-.415.415-.69.14-.277.07-.52-.035-.735-.104-.208-.94-2.265-1.29-3.105-.34-.82-.69-.71-.94-.72l-.8-.015c-.277 0-.735.104-1.12.52-.38.415-1.47 1.435-1.47 3.5s1.505 4.06 1.715 4.34c.208.277 2.96 4.52 7.17 6.335 1 .43 1.78.69 2.39.885 1 .32 1.91.275 2.63.166.8-.12 2.45-1 2.8-1.97.35-.97.35-1.8.245-1.97-.104-.166-.38-.277-.8-.485z" />
+                        </svg>
                     </a>
 
+                    {/* Facebook */}
                     <a
                         href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 transition"
                     >
-                        FB
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                        >
+                            <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.3V12h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.02.18 2.02.18v2.22h-1.14c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.88h-2.12v6.99A10 10 0 0022 12z" />
+                        </svg>
                     </a>
 
+                    {/* Twitter / X */}
                     <a
                         href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:scale-110 transition"
                     >
-                        X
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                        >
+                            <path d="M18.244 2H21l-6.5 7.43L22 22h-6.828l-5.348-7.072L3.8 22H1l6.97-7.966L2 2h6.828l4.848 6.41L18.244 2z" />
+                        </svg>
                     </a>
+
                 </div>
+
 
                 {/* BLOG CONTENT */}
                 <article className="flex-1 max-w-4xl mx-auto">
@@ -459,29 +462,28 @@ export default async function BlogPage({
                     </div>
 
                     {/* MOBILE SHARE */}
-                    <div className="mt-16 pt-8 border-t lg:hidden">
-                        <p className="font-semibold text-lg mb-4 text-[#5A2C14]">
-                            Share this article
-                        </p>
+                    <div className="flex gap-4">
 
-                        <div className="flex gap-4">
-                            <a
-                                href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`}
-                                target="_blank"
-                                className="bg-green-600 text-white px-6 py-2 rounded-full text-sm shadow-md"
-                            >
-                                WhatsApp
-                            </a>
+                        <a
+                            href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-green-600 text-white px-6 py-2 rounded-full text-sm shadow-md flex items-center gap-2"
+                        >
+                            WhatsApp
+                        </a>
 
-                            <a
-                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
-                                target="_blank"
-                                className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm shadow-md"
-                            >
-                                Facebook
-                            </a>
-                        </div>
+                        <a
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm shadow-md flex items-center gap-2"
+                        >
+                            Facebook
+                        </a>
+
                     </div>
+
 
                     {/* ENGAGEMENT CTA */}
                     <div className="mt-20 bg-gradient-to-r from-orange-100 to-orange-50 border border-orange-200 rounded-3xl p-10 text-center shadow-lg">

@@ -2,29 +2,42 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    // Root
     {
-      url: "https://www.champaranswad.com",
+      url: "https://www.champaranswad.com/",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+    },
+
+    // English
+    {
+      url: "https://www.champaranswad.com/en",
+      lastModified: new Date(),
     },
     {
-      url: "https://www.champaranswad.com/#products",
+      url: "https://www.champaranswad.com/en/about",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
     },
     {
-      url: "https://www.champaranswad.com/#about",
+      url: "https://www.champaranswad.com/en/products",
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
     },
     {
-      url: "https://www.champaranswad.com/#contact",
+      url: "https://www.champaranswad.com/en/contact",
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
+    },
+    {
+      url: "https://www.champaranswad.com/en/blog",
+      lastModified: new Date(),
+    },
+
+    // Hindi
+    {
+      url: "https://www.champaranswad.com/hi",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://www.champaranswad.com/hi/blog",
+      lastModified: new Date(),
     },
   ];
 }

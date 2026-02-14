@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="bg-[#fffaf4]">
 
-      <Navbar />
+     
 
       {/* HERO / HOME */}
       <section id="home">
@@ -33,9 +33,9 @@ export default function Home() {
       </section>
 
       {/* CONTACT / FOOTER */}
-      <section id="contact">
+      {/* <section id="contact">
         <Footer />
-      </section>
+      </section> */}
 
     </main>
   );

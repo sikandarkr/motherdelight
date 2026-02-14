@@ -199,13 +199,13 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* GLOBAL NAVBAR */}
+       
         <Navbar />
 
-        {/* PAGE CONTENT */}
+      
         {children}
 
-        {/* GLOBAL FOOTER */}
+       
         <Footer />
 
         {/* ✅ LOCAL BUSINESS + ORGANIZATION SCHEMA */}
